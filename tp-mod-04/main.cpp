@@ -8,17 +8,19 @@ int main()
     List list;
     infotype x;
 
-    createList(list);
+    createList_1305220010(list);
 
     cout << "Masukkan NIM per digit" << endl;
-    cout << "Digit 1:";
-    cin >> x;
+    for (int i = 1; i <= 3; i++)
+    {
+        cout << "Digit "<<i<<": ";
+        cin >> x;
 
-    address newElement = allocate(x);
+        address newElement = allocate_1305220010(x);
 
-    insertFirst(list, newElement);
-
-    printInfo(list);
+        insertFirst_1305220010(list, newElement);
+    }
+    printInfo_1305220010(list);
 
     return 0;
 }

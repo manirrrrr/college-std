@@ -21,12 +21,12 @@ struct List
     address first;
 };
 
-void createList(List &L);
+void createList_1305220010(List &L);
 
-address allocate(infotype x);
+address allocate_1305220010(infotype x);
 
-void insertFirst(List &L, address P);
+void insertFirst_1305220010(List &L, address P);
 
-void printInfo(List L);
+void printInfo_1305220010(List L);
 
 #endif // LIST_H_INCLUDED
