@@ -1,3 +1,6 @@
+#ifndef LIST_H
+#define LIST_H
+
 #include <iostream>
 #define first(L) L.first
 #define next(P) P->next
@@ -8,11 +11,13 @@ using namespace std;
 typedef int infotype;
 typedef struct elmlist *address;
 
-struct elmlist {
+struct elmlist
+{
     infotype info;
     address next;
 };
-struct List {
+struct List
+{
     address first;
 };
 
@@ -23,3 +28,5 @@ address allocate(infotype x);
 void insertFirst(List &L, address P);
 
 void printInfo(List L);
+
+#endif //LIST_H

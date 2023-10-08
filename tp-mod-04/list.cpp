@@ -2,11 +2,13 @@
 #include "list.h"
 using namespace std;
 
-void createList(List &L) {
+void createList(List &L)
+{
     first(L) = NULL;
 }
 
-address allocate(infotype x) {
+address allocate(infotype x)
+{
     address p = new elmlist;
     info(p) = x;
     next(p) = NULL;
@@ -14,14 +16,17 @@ address allocate(infotype x) {
     return p;
 }
 
-void insertFirst(List &L, address P) {
+void insertFirst(List &L, address P)
+{
     next(P) = first(L);
     first(L) = P;
 }
 
-void printInfo(List L) {
+void printInfo(List L)
+{
     address p = first(L);
-    while (p != NULL) {
+    while (p != NULL)
+    {
         cout << info(p) << ", ";
         p = next(p);
     }
