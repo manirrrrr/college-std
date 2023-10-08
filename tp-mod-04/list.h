@@ -1,5 +1,5 @@
-#ifndef LIST_H
-#define LIST_H
+#ifndef LIST_H_INCLUDED
+#define LIST_H_INCLUDED
 
 #include <iostream>
 #define first(L) L.first
@@ -29,4 +29,4 @@ void insertFirst(List &L, address P);
 
 void printInfo(List L);
 
-#endif //LIST_H
+#endif // LIST_H_INCLUDED
