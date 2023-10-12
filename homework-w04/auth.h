@@ -1,6 +1,8 @@
-#ifndef AKUN_H_INCLUDED
-#define AKUN_H_INCLUDED
+#ifndef AUTH_H_INCLUDED
+#define AUTH_H_INCLUDED
 
+#include <iostream>
+#include <string>
 #define Nil NULL
 #define info(P) (P)->info
 #define next(P) (P)->next
@@ -9,7 +11,6 @@
 #define last(L) ((L).last)
 
 using namespace std;
-#include <string>
 
 typedef User infotype;
 typedef struct elmlist *address;
@@ -46,4 +47,4 @@ void deleteLast(list &L, address p);
 
 void removeAkun(string username, list &L);
 
-#endif // AKUN_H_INCLUDED
+#endif // AUTH_H_INCLUDED
