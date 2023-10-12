@@ -32,6 +32,7 @@ int main()
     // Sign up a new account
     infotype newAkun;
     newAkun.username = "user4";
+    newAkun.password = "password2";
     signUp(newAkun, L);
 
     // Display the list
