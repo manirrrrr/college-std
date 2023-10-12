@@ -15,8 +15,8 @@ address createNewElm(infotype akun)
 
 void insertLast(address p, list &L)
 {
-    next(last(L)) = p;
     prev(p) = last(L);
+    next(last(L)) = p;
     last(L) = p;
 }
 
@@ -36,14 +36,25 @@ address findAkun(string username, list L)
 
 void signUp(infotype akun, list &L)
 {
-    address akun = findAkun(akun.username, L);
-    if (akun != Nil)
+    address found, newUser;
+
+    newUser = createNewElm(akun);
+    if (first(L) != Nil)
     {
-        insertLast(akun, L);
+        found = findAkun(akun.username, L);
+        if (found == Nil)
+        {
+            insertLast(newUser, L);
+        }
+        else
+        {
+            cout << "Account has been registered." << endl;
+        }
     }
     else
     {
-        cout << "Account has been registered." << endl;
+        first(L) = newUser;
+        last(L) = newUser;
     }
 }
 
@@ -51,7 +62,6 @@ void deleteFirst(list &L, address p)
 {
     p = first(L);
     first(L) = next(p);
-    prev(p) = Nil;
     prev(first(L)) = Nil;
     next(p) = Nil;
 }
@@ -95,8 +105,8 @@ void removeAkun(string username, list &L)
                 q = prev(akun);
                 deleteAfter(L, q, akun);
             }
+            delete akun;
         }
-        delete akun;
     }
     else
     {

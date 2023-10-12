@@ -4,15 +4,15 @@
 #include <iostream>
 #include <string>
 #define Nil NULL
-#define info(P) (P)->info
-#define next(P) (P)->next
-#define prev(P) (P)->prev
-#define first(L) ((L).first)
-#define last(L) ((L).last)
+#define next(p) p->next
+#define prev(p) p->prev
+#define info(p) p->info
+#define first(L) (L).first
+#define last(L) (L).last
 
 using namespace std;
 
-typedef User infotype;
+typedef struct User infotype;
 typedef struct elmlist *address;
 
 struct User {
