@@ -1,10 +1,12 @@
 #ifndef DOUBLECIRCULAR_H_INCLUDED
 #define DOUBLECIRCULAR_H_INCLUDED
 
+#include <iostream>
 using namespace std;
 
 #define info(P) P->info;
 #define next(P) P->next;
+#define prev(P) P->prev;
 #define first(L) (L).first;
 #define last(L) (L).last;
 
@@ -15,6 +17,7 @@ struct elmList
 {
     infotype info;
     address next;
+    address prev;
 };
 
 struct List
@@ -33,7 +36,7 @@ address findElm_1305220010(List L, infotype x);
 void deleteFirst_1305220010(List &L, address &P);
 void deleteAfter_1305220010(List &L, address Prec, address &P);
 void deleteLast_1305220010(List &L, address &P);
-void printList_1305220010(List L);
+void printInfo_1305220010(List L);
 void deleteByValue_1305220010(List &L, infotype x);
 void reverseList_1305220010(List L, List &L2);
 
