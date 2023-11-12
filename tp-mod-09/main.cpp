@@ -14,7 +14,7 @@ int main()
     {
         char input;
 
-        cout << "Input " << i << ": ";
+        cout << "Input " << i+1 << ": ";
         cin >> input;
         push_1305220010(S, input);
     }

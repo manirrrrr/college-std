@@ -4,15 +4,15 @@
 #include <iostream>
 using namespace std;
 
-#define Top(S) (S).top;
-#define info(S) (S).info;
+#define Top(S) S.top
+#define info(S) S.info
 
 typedef char infotype;
 
 struct stack {
     infotype info[15];
     int top;
-}
+};
 
 void createStack_1305220010(stack &S);
 bool isEmpty_1305220010(stack S);

@@ -41,7 +41,8 @@ void push_1305220010(stack &S, infotype x)
 infotype pop_1305220010(stack &S)
 {
     infotype x;
-    x = info(S)[Top(S)] Top(S) -= 1;
+    x = info(S)[Top(S)];
+    Top(S) -= 1;
     return x;
 }
 
@@ -49,6 +50,7 @@ void printInfo_1305220010(stack S)
 {
     for (int i = Top(S); i > 0; i--)
     {
-        cout << info(S)[i] << " " << endl;
+        cout << info(S)[i] << " ";
     }
+    cout << endl;
 }
