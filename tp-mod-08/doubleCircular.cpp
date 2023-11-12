@@ -78,7 +78,7 @@ address findElm_1305220010(List L, infotype x)
                 return P;
             }
             P = next(P);
-        } while (next(P) != first(L));
+        } while (P != first(L));
         return NULL;
     }
 }
@@ -146,7 +146,7 @@ void printInfo_1305220010(List L)
             }
 
             P = next(P);
-        } while (next(P) != first(L))
+        } while (P != first(L));
     }
 }
 
@@ -162,25 +162,28 @@ void deleteByValue_1305220010(List &L, infotype x)
         address P = first(L);
         do
         {
-            if (info(P) == x)
+            address Q = P;
+            P = next(P);
+
+            if (info(Q) == x)
             {
                 found = true;
-                if (P == first(L))
+                if (Q == first(L))
                 {
-                    deleteFirst_1305220010(L, P);
+                    deleteFirst_1305220010(L, Q);
                 }
-                else if (P == last(L))
+                else if (Q == last(L))
                 {
-                    deleteLast_1305220010(L, P);
+                    deleteLast_1305220010(L, Q);
                 }
                 else
                 {
-                    deleteAfter_1305220010(L, prev(P), P);
+                    deleteAfter_1305220010(L, prev(Q), Q);
                 }
-                dealokasi_1305220010(P);
+
+                dealokasi_1305220010(Q);
             }
-            P = next(P);
-        } while (next(P) != first(L));
+        } while (P != first(L));
 
         if (!found)
         {
@@ -202,6 +205,6 @@ void reverseList_1305220010(List L, List &L2)
         {
             insertLast_1305220010(L2, alokasi_1305220010(info(P)));
             P = prev(P);
-        } while (prev(P) != last(L));
+        } while (P != last(L));
     }
 }

@@ -4,11 +4,11 @@
 #include <iostream>
 using namespace std;
 
-#define info(P) P->info;
-#define next(P) P->next;
-#define prev(P) P->prev;
-#define first(L) (L).first;
-#define last(L) (L).last;
+#define info(P) P->info
+#define next(P) P->next
+#define prev(P) P->prev
+#define first(L) (L).first
+#define last(L) (L).last
 
 typedef int infotype;
 typedef struct elmList *address;
