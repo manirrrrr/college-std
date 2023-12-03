@@ -21,7 +21,7 @@ struct elmQ
 
 struct queue {
     address head, tail;
-}
+};
 
 address alokasi_1305220010(infotype info);
 address findElmt_1305220010(queue Q, infotype num);

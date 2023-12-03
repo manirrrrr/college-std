@@ -2,31 +2,45 @@
 #define STACK_H_INCLUDED
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-#define Top(S) S.top
-#define info(S) S.info
+#define TopS(S) S.TopS
+#define Top(S) S.Top
+#define info(S) S->info
+#define next(S) S->next
+#define prev(S) S->prev
 
 const int MAXSTACK = 10;
 
-typedef char infotype;
+typedef string infotype;
+typedef struct elmList *address;
+
+struct elmList {
+    infotype info;
+    address next;
+    address prev;
+};
+
 struct stack {
-    infotype info[MAXSTACK];
-    int top;
+    address TopS;
+    int Top;
 };
 
 void createStack(stack &S);
-bool isEmpty(stack S);
-bool isFull(stack S);
-void push(stack &S, infotype P);
-void pop(stack &S, infotype &P);
+address createElmList(infotype P);
+void push(stack &S, address P);
+void pop(stack &S, address P);
 void printInfo(stack S);
 
-void stringToStack(stack &S, string str);
-void infixToPostfix(stack S, stack &SPost);
-void infixToPrefix(stack S, stack &SPre);
+void stringToStack(stack &S, infotype str);
 
-void infixToValue(stack S);
+int getPriority(infotype c);
+bool isOperator(infotype c);
+
+void infixToPostfix(stack &S);
+void infixToPrefix(stack &S);
+
 void prefixToValue(stack S);
 void postfixToValue(stack S);
 

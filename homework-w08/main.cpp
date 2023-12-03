@@ -9,7 +9,9 @@ int main()
     string input;
     cin >> input;
     stringToStack(S, input);
+    printInfo(S);
 
+    infixToPostfix(S);
     printInfo(S);
 
     return 0;

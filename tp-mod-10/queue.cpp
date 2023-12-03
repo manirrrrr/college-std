@@ -127,18 +127,21 @@ void ganjilGenap_1305220010(queue &Q, queue &QGanjil, queue &QGenap)
     address P;
     int lenQ = nbOfElm_1305220010(Q);
 
-    for (int i = 1; i < lenQ; i++)
+    for (int i = 1; i <= lenQ+1; i++)
     {
-        P = findElmt_1305220010(i);
-        if (i % 2 == 0)
+        P = findElmt_1305220010(Q, i);
+        if (P != Nil)
         {
-            deQueue_1305220010(Q, P);
-            enQueue_1305220010(QGenap, P);
-        }
-        else if (i % 2 != 0)
-        {
-            deQueue_1305220010(Q, P);
-            enQueue_1305220010(QGanjil, P);
+            if (i % 2 == 0)
+            {
+                deQueue_1305220010(Q, P);
+                enQueue_1305220010(QGenap, P);
+            }
+            else if (i % 2 != 0)
+            {
+                deQueue_1305220010(Q, P);
+                enQueue_1305220010(QGanjil, P);
+            }
         }
     }
 }
