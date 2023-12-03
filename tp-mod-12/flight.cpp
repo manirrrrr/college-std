@@ -40,10 +40,10 @@ void showJadwal_1305220010(ListJadwal L)
     }
     else
     {
-        cout << "Kode\tJenis\tTanggal\tWaktu\tAsal\tTujuan\tKapasitas" << endl;
+        cout << "Kode | Jenis | Tanggal | Waktu | Asal | Tujuan | Kapasitas" << endl;
         while (P != NULL)
         {
-            cout << info(P).Kode << "\t" << info(P).Jenis << "\t" << info(P).Tanggal << "\t" << info(P).Waktu << "\t" << info(P).Asal << "\t" << info(P).Tujuan << "\t" << info(P).Kapasitas << endl;
+            cout << info(P).Kode << " | " << info(P).Jenis << " | " << info(P).Tanggal << " | " << info(P).Waktu << " | " << info(P).Asal << " | " << info(P).Tujuan << " | " << info(P).Kapasitas << endl;
             P = next(P);
         }
     }

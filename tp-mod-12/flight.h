@@ -19,16 +19,16 @@ struct jadwalPenerbangan {
     string Asal;
     string Tujuan;
     int Kapasitas;
-}
+};
 
 struct elemenJadwal {
     infotype info;
     adr_jadwalP next;
-}
+};
 
 struct ListJadwal {
     adr_jadwalP first;
-}
+};
 
 void createListJadwal_1305220010(ListJadwal &L);
 adr_jadwalP createElemenJadwal_1305220010(infotype X);
